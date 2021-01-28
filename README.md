@@ -15,114 +15,114 @@
 ## Database Models
 Your database should contain the following four models, including the requirements listed for each model:
 
-Category
+- Category
 
-id
+    - id
 
-Integer
+        - Integer
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Set as primary key
+        - Set as primary key
 
-Uses auto increment
+        - Uses auto increment
 
-category_name
+    - category_name
 
-String
+        - String
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Product
+- Product
 
-id
+    - id
 
-Integer
+        - Integer
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Set as primary key
+        - Set as primary key
 
-Uses auto increment
+        - Uses auto increment
 
-product_name
+    - product_name
 
-String
+        - String
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-price
+    - price
 
-Decimal
+        - Decimal
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Validates that the value is a decimal
+        - Validates that the value is a decimal
 
-stock
+    - stock
 
-Integer
+        - Integer
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Set a default value of 10
+        - Set a default value of 10
 
-Validates that the value is numeric
+        -  Validates that the value is numeric
 
-category_id
+    - category_id
 
-Integer
+        - Integer
 
-References the category model's id
+        - References the category model's id
 
-Tag
+- Tag
 
-id
+    - id
 
-Integer
+        - Integer
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Set as primary key
+        - Set as primary key
 
-Uses auto increment
+        - Uses auto increment
 
-tag_name
+    - tag_name
 
-String
+        - String
 
-ProductTag
+- ProductTag
 
-id
+    - id
 
-Integer
+        - Integer
 
-Doesn't allow null values
+        - Doesn't allow null values
 
-Set as primary key
+        - Set as primary key
 
-Uses auto increment
+        - Uses auto increment
 
-product_id
+    - product_id
 
-Integer
+        - Integer
 
-References the product model's id
+        - References the product model's id
 
-tag_id
+    - tag_id
 
-Integer
+        - Integer
 
-References the tag model's id
+        - References the tag model's id
 
 ## Associations
 
 You'll need to execute association methods on your Sequelize models to create the following relationships between them:
 
-Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
+- Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
 
-Category has many Product models.
+- Category has many Product models.
 
-Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
+- Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
 
-Tag belongs to many Product models.
+- Tag belongs to many Product models.

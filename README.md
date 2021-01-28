@@ -126,3 +126,14 @@ You'll need to execute association methods on your Sequelize models to create th
 - Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
 
 - Tag belongs to many Product models.
+
+## Fill Out the API Routes to Perform RESTful CRUD Operations
+
+
+- Fill out the unfinished routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
+
+## Seed the Database
+- After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
+
+## Sync Sequelize to the Database on Server Start
+- Create the code needed in server.js to sync the Sequelize models to the MySQL database on server start.

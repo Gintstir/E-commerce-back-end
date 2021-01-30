@@ -34,7 +34,7 @@ Here is a walkthrough of the database being queried using the Insomnia app: **[E
 
 ## **Installation**
 
-To use/try this application, first- `clone` or `fork/clone` this repository(see contributing section).<br> Install the required dependencies for this project using the command: `npm install` or `npm i`. This will install: **[mySQL](https://www.npmjs.com/package/mysql2)**,  **[dotenv](https://www.npmjs.com/package/dotenv)**, **[express](https://www.npmjs.com/package/express)**, and **[sequelize](https://www.npmjs.com/package/sequelize)** <br>  using the command `node index.js` from the command line.
+To use/try this application, first- `clone` or `fork/clone` this repository(see contributing section).<br> Install the required dependencies for this project using the command: `npm install` or `npm i`. This will install: **[mySQL](https://www.npmjs.com/package/mysql2)**,  **[dotenv](https://www.npmjs.com/package/dotenv)**, **[express](https://www.npmjs.com/package/express)**, and **[sequelize](https://www.npmjs.com/package/sequelize)** using the command `node index.js` from the command line.
 
 
 

@@ -1,4 +1,12 @@
-# E-commerce Back End Starter Code
+# **E-commerce Back End** ![badge](https://img.shields.io/badge/License-Apache~2.0-brightgreen.svg)      
+
+## **Description**
+
+ReadMe-generator does exactly that.<br> As a Node.js powered command line application it creates a professional, and stylish README.md file based on a user's input. This input is created by a user responding to prompts generated with the Inquirer npm.
+
+Here is a walkthrough of the database being queried using the Insomnia app: **[E-Commerce-Backend Testing Walkthrough](https://drive.google.com/file/d/1Fq4TQsOYTVuw6dIc5TZMOIKpgSD8GBEF/view)**
+
+## User Story:
 
 - GIVEN a functional Express.js API
 - WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
@@ -12,128 +20,75 @@
 - WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 - THEN I am able to successfully create, update, and delete data in my database
 
-## Database Models
-Your database should contain the following four models, including the requirements listed for each model:
+## **Table of Contents**
 
-- Category
-
-    - id
-
-        - Integer
-
-        - Doesn't allow null values
-
-        - Set as primary key
-
-        - Uses auto increment
-
-    - category_name
-
-        - String
-
-        - Doesn't allow null values
-
-- Product
-
-    - id
-
-        - Integer
-
-        - Doesn't allow null values
-
-        - Set as primary key
-
-        - Uses auto increment
-
-    - product_name
-
-        - String
-
-        - Doesn't allow null values
-
-    - price
-
-        - Decimal
-
-        - Doesn't allow null values
-
-        - Validates that the value is a decimal
-
-    - stock
-
-        - Integer
-
-        - Doesn't allow null values
-
-        - Set a default value of 10
-
-        -  Validates that the value is numeric
-
-    - category_id
-
-        - Integer
-
-        - References the category model's id
-
-- Tag
-
-    - id
-
-        - Integer
-
-        - Doesn't allow null values
-
-        - Set as primary key
-
-        - Uses auto increment
-
-    - tag_name
-
-        - String
-
-- ProductTag
-
-    - id
-
-        - Integer
-
-        - Doesn't allow null values
-
-        - Set as primary key
-
-        - Uses auto increment
-
-    - product_id
-
-        - Integer
-
-        - References the product model's id
-
-    - tag_id
-
-        - Integer
-
-        - References the tag model's id
-
-## Associations
-
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
-
-- Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
-
-- Category has many Product models.
-
-- Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
-
-- Tag belongs to many Product models.
-
-## Fill Out the API Routes to Perform RESTful CRUD Operations
+* *[Installation](#installation)*
+* *[Usage Instructions](#usage-instructions)*
+* *[Contributing](#contributing)*
+* *[Technology](#technology)*
+* *[Tests](#tests)*
+* *[Questions](#questions)*
+* *[License](#license)*
+* 
 
 
-- Fill out the unfinished routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
+## **Installation**
 
-## Seed the Database
-- After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
+To use/try this application, first- `clone` or `fork/clone` this repository(see contributing section).<br> Install the required dependencies for this project using the command: `npm install` or `npm i`. This will install: **[mySQL](https://www.npmjs.com/package/mysql2)**,  **[dotenv](https://www.npmjs.com/package/dotenv)**, **[express](https://www.npmjs.com/package/express)**, and **[sequelize](https://www.npmjs.com/package/sequelize)** <br>  using the command `node index.js` from the command line.
 
-## Sync Sequelize to the Database on Server Start
-- Create the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
+
+
+## **Usage-instructions**
+
+Open the mySQL CLI using the command `mysql -u root -p` in the terminal.  You will be prompted to enter you mySQL password. Enter the command `USE ecommerce_db;` then create the schema from the MySQL shell using the command `source .db/schema.sql;`, you may now quit the MySQL shell by simply typing `quit` and hitting the return key. Back in the command line you can now source the seed files for the application with the command `npm run seed` this will populate the table.  Finally, enter `npm start` or `node server.js` to start and the server and begin interfacing with the database.  <br>
+
+Keep in mind, if you make any changes to the file in the models directory you will need to rebuild the database.  To do this navigate the the `server.js` file in the root directory.  At the bottom of the file chance `force: false` to `force: true`, once you've done this use the command `npm start` to rebuild the database with your changes.  Now change `true` back to `false`, quit the server with the `control + c` command and restart with `npm run` or `npm install`.  Your changes should now take effect
+
+
+
+## **Screenshots**
+A .gif of the walktrough: <br>
+![Walkthrough](assets/Project_13_ecommerce-backend.gif) <br>
+
+Successfully POST request to Products: <br>
+![Creating a Product](assets/Insomnia-Create-Product.png)
+
+Sucessful GET request for all Categories: <br>
+![All Categories](assets/Insomnia-Read-Category-All.png)
+
+
+## **Contributing**
+
+Please refer to the **[Contributor Covenant](https://www.contributor-covenant.org/)** for contribution guidelines.
+
+## **Technology**
+
+This project was completed using: 
+- `Node.js`
+- `Sequelize`
+- `MySQL2`
+- `Dotenv`
+- `Express`
+- `Insomnia`.
+
+## **Tests**  
+
+No test need to be run at this time. 
+
+## **Questions**
+
+For any questions, comments, or feedback please feel free to reach out: <br>
+- **[Github](https://github.com/gintstir)** 
+- **<gint.stirbys@gmail.com>**
+
+## **License** 
+
+Copyright © Gintautas Stirbys, 2021.  All Rights Reserved.
+
+This Project is licensed under the **[Apache~2.0](https://www.apache.org/licenses/LICENSE-2.0)** license.
+
+
+        
+
+
+
